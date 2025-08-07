@@ -1,4 +1,39 @@
 list = [1, 2, 3, 4, 5] = Datos ordenados, el orden si importa, datos heterogeneos, mutable 
 tupla = (1, 2, 3, 4, 5) = Datos ordenados, el orden si importa, datos heterogeneos, inmutable
 Conjunto = set([1, 2, 3], [4, 5, 6]) = Datos no ordenados, el orden no importa, heterogeneo, mutable y sin repeticiones
-diccionario = {uno: "1", ods: "2", tres: "3"} = Datos relacionados directamente con valores, no ordenados, heterogeeo, con valor inmutable y mutable
+diccionario = {uno: "1", ods: "2", tres: "3"} = Datos relacionados directamente con valores, no ordenados, heterogeneo, con valor inmutable y mutable
+
+Actividad list
+
+Crea una lista con los números del 1 al 10 y obtén otra lista con los cuadrados de cada número usando list comprehension.
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lista_comprehension = [n**2 for n in lista]
+
+Dada la lista ["manzana", "pera", "banano", "mango", "pera"], elimina todas las ocurrencias de "pera" sin usar remove() más de una vez.
+frutas = ["manzana", "pera", "banano", "mango", "pera"]
+frutas_sin_pera = [fruta for fruta in frutas if fruta != "pera"]
+
+Dada una lista de precios [1200, 750, 3000, 2200, 1800], obtén (1) el precio máximo, (2) el mínimo y (3) el promedio con una sola pasada sobre la lista.
+precios = [1200, 750, 3000, 2200, 1800]
+print ("el precio mas alto es: ", max(precios), "y el precio mas bajo es: ", min(precios), "y el precio promedio es: ", sum(precios)/len(precios))
+
+Actividad diccionarios 
+Construye un diccionario que asocie las letras de la A a la E con sus posiciones (A→1, B→2…), usando dict comprehension.
+dict_comprehension = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+    "d": 4,
+    "e": 5,
+}
+
+Tienes el diccionario {"nombre": "Ana", "edad": 23, "ciudad": "Bogotá"}. Cambia la ciudad a “Medellín”, aumenta la edad en 1 y agrega la clave "activo": True.
+huesped = {"nombre": "Ana", "edad": 23, "ciudad": "Bogotá"}
+
+huesped["activo"] = True
+huesped["edad"] += 1
+huesped["ciudad"] = "Medellín"
+
+
+
+Escribe una función invertir(d) que reciba un diccionario y devuelva otro con claves y valores intercambiados. ¿Qué sucede si hay valores repetidos? Maneja esa situación devolviendo los valores repetidos en una lista.
